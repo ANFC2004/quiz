@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #f7f1f2,
+        #eee7eb
+    );
+
+    color: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 24px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+
+    animation: appear 0.35s ease;
+}
+
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.small-title {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #a77b87;
+
+    margin-bottom: 12px;
+}
+
+
+h1 {
+    font-size: 36px;
+
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+
+    color: #2f2930;
+}
+
+
+h2 {
+    font-size: 25px;
+
+    line-height: 1.35;
+
+    margin-bottom: 25px;
+
+    color: #2f2930;
+}
+
+
+p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #625c61;
+
+    margin-bottom: 18px;
+}
+
+
+/* PROGRESO */
+
+.progress-container {
+    margin-bottom: 35px;
+}
+
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+.progress-bar {
+    width: 100%;
+
+    height: 7px;
+
+    background: #eee;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+#progressFill {
+    height: 100%;
+
+    width: 17%;
+
+    background: #a77b87;
+
+    border-radius: 10px;
+
+    transition: width 0.3s ease;
+}
+
+
+/* TEXTAREA */
+
+textarea {
+    width: 100%;
+
+    min-height: 220px;
+
+    resize: vertical;
+
+    border: 1px solid #ddd;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    line-height: 1.6;
+
+    outline: none;
+
+    transition: 0.2s;
+
+    background: #fafafa;
+}
+
+
+textarea:focus {
+    border-color: #a77b87;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(167, 123, 135, 0.1);
+}
+
+
+textarea::placeholder {
+    color: #aaa;
+}
+
+
+/* BOTONES */
+
+.buttons {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 14px 22px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.primary-btn {
+    background: #a77b87;
+
+    color: white;
+}
+
+
+.primary-btn:hover {
+    background: #916a75;
+
+    transform: translateY(-1px);
+}
+
+
+.secondary-btn {
+    background: #eee8ea;
+
+    color: #5f565a;
+}
+
+
+.secondary-btn:hover {
+    background: #e3dadd;
+}
+
+
+.secondary-btn:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* FINAL */
+
+.final-card {
+    text-align: center;
+}
+
+
+.heart {
+    display: block;
+
+    font-size: 55px;
+
+    color: #a77b87;
+
+    margin-bottom: 10px;
+}
+
+
+/* RESPUESTAS */
+
+.answer-card {
+    padding: 20px;
+
+    background: #faf8f9;
+
+    border-radius: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.answer-card h3 {
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    margin-bottom: 10px;
+
+    color: #4a4145;
+}
+
+
+.answer-card p {
+    font-size: 15px;
+
+    white-space: pre-wrap;
+
+    margin: 0;
+
+    color: #6c6468;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 200px;
+    }
+
+}

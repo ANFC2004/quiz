@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiero entenderte mejor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- INTRODUCCIÓN -->
+        <section id="intro" class="screen active">
+
+            <div class="card">
+
+                <span class="small-title">PARA TI</span>
+
+                <h1>Quiero entenderte mejor</h1>
+
+                <p>
+                    Hay cosas que quiero mejorar como pareja y no quiero
+                    asumir lo que necesitas o cómo te sientes.
+                </p>
+
+                <p>
+                    Por eso preparé estas preguntas para ti.
+                    No tienes que responderlas de una manera específica
+                    ni decirme solamente cosas bonitas.
+                </p>
+
+                <p>
+                    Quiero conocer honestamente cómo te sientes y qué
+                    puedo hacer mejor, especialmente ahora que estamos
+                    a distancia.
+                </p>
+
+                <button id="startBtn" class="primary-btn">
+                    Empezar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <section id="questionScreen" class="screen">
+
+            <div class="card">
+
+                <div class="progress-container">
+
+                    <div class="progress-info">
+                        <span id="questionNumber">Pregunta 1 de 6</span>
+                        <span id="progressPercent">17%</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="question-container">
+
+                    <span class="small-title">PREGUNTA</span>
+
+                    <h2 id="questionText"></h2>
+
+                    <textarea
+                        id="answer"
+                        placeholder="Escribe aquí lo que realmente piensas..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <button id="previousBtn" class="secondary-btn">
+                        Anterior
+                    </button>
+
+                    <button id="nextBtn" class="primary-btn">
+                        Siguiente
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section id="finishScreen" class="screen">
+
+            <div class="card final-card">
+
+                <span class="heart">♡</span>
+
+                <h1>Gracias por responder</h1>
+
+                <p>
+                    Gracias por tomarte el tiempo para decirme lo que
+                    realmente piensas y sientes.
+                </p>
+
+                <p>
+                    No hice esto para buscar respuestas perfectas,
+                    sino porque quiero entenderte mejor y aprender
+                    a ser una mejor pareja para ti.
+                </p>
+
+                <button id="showAnswersBtn" class="primary-btn">
+                    Ver respuestas
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESPUESTAS -->
+        <section id="answersScreen" class="screen">
+
+            <div class="card">
+
+                <span class="small-title">TUS RESPUESTAS</span>
+
+                <h1>Lo que me dijiste</h1>
+
+                <div id="answersContainer"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
